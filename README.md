@@ -109,35 +109,35 @@ Keywords Youtube :
 5.  Process Visualization :
     1. Crawl Data Berita
        
-       ![Start Process](./photo/crawler_berita_1.jpg)
+       ![Start Process](./photo/crawler_berita_1.png)
 
-       ![Hasil Process](./photo/crawler_berita_2.jpg)
+       ![Hasil Process](./photo/crawler_berita_2.png)
     2. Crawl Sosmed Youtube
 
-       ![Start Process](./photo/crawler_sosmedYT_1.jpg)
+       ![Start Process](./photo/crawler_sosmedYT_1.png)
 
-       ![Hasil Process](./photo/crawler_sosmedYT_2.jpg)
+       ![Hasil Process](./photo/crawler_sosmedYT_2.png)
        
     3. Menggunakan LocalLLM yaitu google/gemma-3-12b untuk memberihkan dan merangkum data
        
-       ![Start Process](./photo/localLLM_1.jpg)
+       ![Start Process](./photo/localLLM_1.png)
 
-       ![Local LLM Process recieving and sending data](./photo/localLLM_2.jpg)
+       ![Local LLM Process recieving and sending data](./photo/localLLM_2.png)
 
-       ![Hasil Process](./photo/localLLM_3.jpg)
+       ![Hasil Process](./photo/localLLM_3.png)
        
     4. Combine CSV setelah clean dan dirangkum ke combined data from all source
        
-       ![Hasil Process](./photo/csv_combiner.jpg)
+       ![Hasil Process](./photo/csv_combiner.png)
 
     5. Dilakukan sentiment analysis oleh Indobert Model
         
-        ![Start Process](./photo/final_sentiment_result_1.jpg)
+        ![Start Process](./photo/final_sentiment_result_1.png)
        
     6. Convert from csv to excel from website (manually)
         
-        ![Ganti nanti](./photo/final_sentiment_result_1.jpg)
+        ![Ganti nanti](./photo/final_sentiment_result_1.png)
         
     7. Dashboard and visualize data with Tableu
         
-        ![Ganti Nanti](./photo/final_sentiment_result_1.jpg)
+        ![Ganti Nanti](./photo/final_sentiment_result_1.png)
