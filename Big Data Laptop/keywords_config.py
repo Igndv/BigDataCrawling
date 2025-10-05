@@ -40,19 +40,6 @@ NEWS_KEYWORDS = [
     "kampanye anti hoax Kominfo",
 ]
 
-# --- KEYWORDS FOR INSTAGRAM ---
-# Use these with Selenium (hashtag search)
-INSTAGRAM_HASHTAGS = [
-    "WujudkanIndonesiaDamai",
-    "IndonesiaDamai",
-    "JagaPersatuan",
-    "KerukunanBangsa",
-    "TolakProvokasi",
-    "PemiluDamai2024",
-    "Toleransi",
-    "StopHoax",
-]
-
 # --- KEYWORDS FOR YOUTUBE ---
 # Use these with Selenium (search queries)
 YOUTUBE_KEYWORDS = [
@@ -68,12 +55,7 @@ YOUTUBE_KEYWORDS = [
 
 # --- SCRAPING LIMITS CONFIGURATION ---
 # Adjust these values to control how much data to collect
-SCRAPING_LIMITS = {
-    # Instagram limits
-    "instagram_posts_per_hashtag": 5,         # How many posts to scrape per hashtag
-    "instagram_comments_per_post": 50,        # How many comments to collect per post
-    "instagram_max_scroll_attempts": 3,       # How many times to scroll on hashtag page
-    
+SCRAPING_LIMITS = {    
     # YouTube limits
     "youtube_videos_per_keyword": 3,          # How many videos to scrape per keyword
     "youtube_comments_per_video": 50,         # How many comments to collect per video
@@ -88,11 +70,3 @@ SCRAPING_LIMITS = {
 LIMIT_NEWS_KEYWORDS = None  # Set to a number (e.g., 5) to limit, or None for all
 LIMIT_INSTAGRAM_HASHTAGS = None
 LIMIT_YOUTUBE_KEYWORDS = None
-
-# Apply limits if set
-if LIMIT_NEWS_KEYWORDS:
-    NEWS_KEYWORDS = NEWS_KEYWORDS[:LIMIT_NEWS_KEYWORDS]
-if LIMIT_INSTAGRAM_HASHTAGS:
-    INSTAGRAM_HASHTAGS = INSTAGRAM_HASHTAGS[:LIMIT_INSTAGRAM_HASHTAGS]
-if LIMIT_YOUTUBE_KEYWORDS:
-    YOUTUBE_KEYWORDS = YOUTUBE_KEYWORDS[:LIMIT_YOUTUBE_KEYWORDS]

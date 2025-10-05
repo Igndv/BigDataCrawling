@@ -1,0 +1,13 @@
+# Web Scraping & HTTP Requests
+requests
+beautifulsoup4
+
+# Environment & API Clients
+python-dotenv
+google-api-python-client
+google-generativeai
+
+# Data Analysis & Machine Learning
+pandas
+torch
+transformers
