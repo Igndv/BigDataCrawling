@@ -89,20 +89,20 @@ Keywords Youtube :
     localLLM.py                          - NEW : Cleans and summarizes text using --- AI #Before update, because got limited by free tier API
     
 4. Workflow :
-   a. crawler_berita.py → news_portal/news_detik.csv
-   b. crawler_sosmedYT.py → social_media/youtube.csv
+   - crawler_berita.py → news_portal/news_detik.csv
+   - crawler_sosmedYT.py → social_media/youtube.csv
 
-   c. localLLM.py (previously gemini.py) → Processes both CSVs:
+   - localLLM.py (previously gemini.py) → Processes both CSVs:
      - news_detik.csv → news_detik_cleaned.csv
      - youtube.csv → youtube_cleaned.csv
 
-   d. csv_combiner.py → Merges all *_cleaned.csv files:
-     → combined_data/combined_all_sources_cleaned.csv
+   - csv_combiner.py → Merges all *_cleaned.csv files:
+     - combined_data/combined_all_sources_cleaned.csv
 
-   e. indobert_process.py → Sentiment analysis:
-     → combined_data/final_sentiment_results.csv
+   - indobert_process.py → Sentiment analysis:
+     - combined_data/final_sentiment_results.csv
 
-   f. dashboard and visualize data with powerBI (browser)
+   - dashboard and visualize data with powerBI (browser)
 
 5.  Process Visualization :
     1. Gambar proses nanti laporan per step di PC
