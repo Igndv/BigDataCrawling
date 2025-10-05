@@ -101,8 +101,43 @@ Keywords Youtube :
 
    - indobert_process.py → Sentiment analysis:
      - combined_data/final_sentiment_results.csv
+    
+   - Convert from csv to excel untuk mempermudah pengaksesan oleh tableu
 
-   - dashboard and visualize data with powerBI (browser)
+   - dashboard and visualize data with tableu (browser)
 
 5.  Process Visualization :
-    1. Gambar proses nanti laporan per step di PC
+    1. Crawl Data Berita
+       
+       ![Start Process](photo/crawler_berita_1.jpg)
+
+       ![Hasil Process](photo/crawler_berita_2.jpg)
+    3. Crawl Sosmed Youtube
+
+       ![Start Process](photo/crawler_sosmedYT_1.jpg)
+
+       ![Hasil Process](photo/crawler_sosmedYT_2.jpg)
+       
+    5. Menggunakan LocalLLM yaitu google/gemma-3-12b untuk memberihkan dan merangkum data
+       
+       ![Start Process](photo/localLLM_1.jpg)
+
+       ![Local LLM Process recieving and sending data](photo/localLLM_2.jpg)
+
+       ![Hasil Process](photo/localLLM_3.jpg)
+       
+    7. Combine CSV setelah clean dan dirangkum ke combined data from all source
+       
+       ![Hasil Process](photo/csv_combiner.jpg)
+
+    9. Dilakukan sentiment analysis oleh Indobert Model
+        
+        ![Start Process](photo/final_sentiment_result_1.jpg)
+       
+    11. Convert from csv to excel from website (manually)
+        
+        ![Ganti nanti](photo/final_sentiment_result_1.jpg)
+        
+    13. Dashboard and visualize data with Tableu
+        
+        ![Ganti Nanti](photo/final_sentiment_result_1.jpg)
