@@ -132,12 +132,12 @@ Keywords Youtube :
 
     5. Dilakukan sentiment analysis oleh Indobert Model
         
-        ![Start Process](./photo/final_sentiment_result_1.png)
+        ![Start Process](./photo/final_sentiment_results_1.png)
        
     6. Convert from csv to excel from website (manually)
         
-        ![Ganti nanti](./photo/final_sentiment_result_1.png)
+        ![Ganti nanti](./photo/final_sentiment_results_1.png)
         
     7. Dashboard and visualize data with Tableu
         
-        ![Ganti Nanti](./photo/final_sentiment_result_1.png)
+        ![Ganti Nanti](./photo/final_sentiment_results_1.png)
