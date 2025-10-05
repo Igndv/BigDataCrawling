@@ -7,7 +7,8 @@ Metode : Crawling Data portal berita dengan BS4 dan Youtube dengan Youtube Data 
 --------------------------------------------------------------------------------------
 ### Keywords ### (Bisa di cek di keywords_config.py) :
 
-Keywords Berita : 
+Keywords Berita :
+
     # Kategori 1: Kata Kunci Utama
     "Wujudkan Indonesia Damai",
     "Indonesia Damai",
@@ -42,6 +43,7 @@ Keywords Berita :
     "kampanye anti hoax Kominfo"
 
 Keywords Youtube :
+
     "Webinar Wujudkan Indonesia Damai",
     "Deklarasi kampanye damai",
     "Pesan damai dari tokoh agama",
@@ -53,8 +55,9 @@ Keywords Youtube :
 --------------------------------------------------------------------------------------
 
 1. Install to Run :
-  The requirements.txt have all of the required dependencies to install 
-  pip install -r requirements.txt
+  The requirements.txt have all of the required dependencies to install
+
+          pip install -r requirements.txt
 
   dependencies included : request, bs4, python-dotenv, google-api-python-client, pandas, torch, transformers, google-generativeai #On final Product, unused because I am using a local LLM
 
