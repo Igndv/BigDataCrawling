@@ -77,17 +77,16 @@ Keywords Youtube :
       - youtube_cleaned.csv              - Gemini-cleaned comments
     
     Files:
-    .env                                 - Contains API keys and credentials (Instagram, YouTube API, Gemini API)
-    .gitignore                           - Prevents sensitive files from being committed to git
-    crawler_berita.py                    - Scrapes Detik news articles (title + content)
-    crawler_sosmedYT.py                  - Scrapes YouTube comments using API
-    csv_combiner.py                      - Merges all *_cleaned.csv files into one
-    indobert_process.py                  - Performs sentiment analysis (positive/neutral/negative)
-    keywords_config.py                   - Central configuration for keywords and scraping limits
-    parse_csv.py                         - Utility to read and analyze CSV data
+    - .env                                 - Contains API keys and credentials (Instagram, YouTube API, Gemini API)
+    - .gitignore                           - Prevents sensitive files from being committed to git
+    - crawler_berita.py                    - Scrapes Detik news articles (title + content)
+    - crawler_sosmedYT.py                  - Scrapes YouTube comments using API
+    - csv_combiner.py                      - Merges all *_cleaned.csv files into one
+    - indobert_process.py                  - Performs sentiment analysis (positive/neutral/negative)
+    - keywords_config.py                   - Central configuration for keywords and scraping limits
    
-    gemini.py                            - Cleans and summarizes text using Gemini AI #Before update, because got limited by free tier API
-    localLLM.py                          - NEW : Cleans and summarizes text using --- AI #Before update, because got limited by free tier API
+    - gemini.py                            - Cleans and summarizes text using Gemini AI #Before update, because got limited by free tier API
+    - localLLM.py                          - NEW : Cleans and summarizes text using --- AI #Before update, because got limited by free tier API
     
 4. Workflow :
    - crawler_berita.py → news_portal/news_detik.csv
