@@ -5,6 +5,9 @@ Topik : #WujudkanIndonesiaDamai
 
 Metode : Crawling Data portal berita dengan BS4 dan Youtube dengan Youtube Data V3 API
 
+Gerakan #WujudkanIndonesiaDamai adalah gerakan sosial yang lahir dari keprihatinan atas potensi perpecahan yang mengancam kehidupan berbangsa dan bernegara di Indonesia.
+Tujuan utama dari gerakan #WujudkanIndonesiaDamai adalah untuk menekankan pentingnya menjaga kedamaian dalam menyuarakan aspirasi masyarakat dan mahasiswa dengan cara yang damai dan tanpa kekerasan. Gerakan ini bertujuan menciptakan suasana kondusif bagi dialog konstruktif mengenai berbagai isu sosial dan politik yang menjadi perhatian rakyat dan kaum muda. Melalui aksi damai, gerakan ini ingin mendorong reformasi, transparansi pemerintahan, dan penghormatan terhadap kebebasan berpendapat sekaligus menghindari bentrokan maupun kekerasan yang dapat merugikan semua pihak. Intinya, #WujudkanIndonesiaDamai berkomitmen untuk mewujudkan perubahan positif dengan cara yang harmonis demi masa depan Indonesia yang lebih adil dan damai.
+
 --------------------------------------------------------------------------------------
 ### Keywords ### (Bisa di cek di keywords_config.py) :
 
