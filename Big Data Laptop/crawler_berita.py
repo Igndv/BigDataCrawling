@@ -14,7 +14,7 @@ load_dotenv()
 os.makedirs("news_portal", exist_ok=True)
 os.makedirs("social_media", exist_ok=True)
 
-# --- 📜 CONFIGURATION ---
+# --- Config ---
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -26,12 +26,12 @@ HEADERS = {
     'Cache-Control': 'max-age=0'
 }
 
-# Scraping limits - adjust these to control article collection
+# Crawler Limit
 MAX_ARTICLES_PER_KEYWORD = 30  # Increase to 30 per keyword per site
 MAX_LINKS_TO_SCRAPE = 100  # Maximum links to try per search
 TARGET_TOTAL_ARTICLES = 1000  # Overall target - 1000 articles
 
-# News site configurations with search URL and selectors
+#Taget Config
 NEWS_SITES = {
     "detik": {
         "search_url": "https://www.detik.com/search/searchall?query={}&page={}",  # Added pagination
@@ -51,7 +51,7 @@ def save_to_csv(articles, csv_file):
     Saves scraped articles to CSV file (overwrites existing file).
     """
     if not articles:
-        print(f"⚠️  No articles to save for {csv_file}")
+        print(f"No articles to save for {csv_file}")
         return
     
     # CSV headers
@@ -91,7 +91,7 @@ def get_article_links_paginated(keyword, site_name, site_config, articles_needed
     max_pages = site_config.get("max_pages", 5)
     
     for page in range(1, max_pages + 1):
-        if len(all_links) >= articles_needed * 2:  # Get extra links as backup
+        if len(all_links) >= articles_needed * 2:
             break
             
         try:
@@ -118,7 +118,7 @@ def get_article_links_paginated(keyword, site_name, site_config, articles_needed
             articles = soup.find_all(site_config["article_selector"].split('[')[0])
             
             if not articles:
-                print(f"   ⚠️  No articles found on page {page}")
+                print(f"No articles found on page {page}")
                 break
 
             page_links = []
@@ -126,7 +126,7 @@ def get_article_links_paginated(keyword, site_name, site_config, articles_needed
                 link_tag = article.find(site_config["link_selector"])
                 if link_tag and link_tag.get('href'):
                     url = link_tag['href']
-                    # Make sure URL is absolute
+
                     if url.startswith('/'):
                         base_domain = f"https://www.{site_name}"
                         url = base_domain + url
@@ -149,7 +149,7 @@ def get_article_links_paginated(keyword, site_name, site_config, articles_needed
     
     # Limit to what we need
     all_links = all_links[:articles_needed]
-    print(f"✅ Total links collected: {len(all_links)}")
+    print(f"Total links collected: {len(all_links)}")
     return all_links
 
 
@@ -209,10 +209,10 @@ def scrape_article_content(url, site_name, site_config):
         }
 
     except requests.exceptions.RequestException as e:
-        print(f"   ⚠️  Error scraping article: {e}")
+        print(f"Error scraping article: {e}")
         return None
     except Exception as e:
-        print(f"   ⚠️  Parsing error: {e}")
+        print(f"Parsing error: {e}")
         return None
 
 
@@ -242,24 +242,24 @@ def scrape_news_site(keyword, site_name, site_config, articles_needed):
             print(f"   ✅ Title: {article_data['title'][:60]}...")
             print(f"   📝 Paragraphs: {article_data['paragraph_count']}")
         
-        # Polite delay between articles
-        time.sleep(1)  # Reduced from 1.5 to 1 second for faster scraping
+        # Add Delay
+        time.sleep(1)
         
-        # Stop if we've reached our target for this keyword
+        # Stop if limit reached
         if len(scraped_articles) >= articles_needed:
             break
     
     return scraped_articles
 
 
-# --- 🚦 MAIN ORCHESTRATOR ---
+# --- Main ---
 
 if __name__ == "__main__":
-    print("🚀 Starting Enhanced News Web Scraper...")
-    print(f"📋 Total keywords to process: {len(NEWS_KEYWORDS)}")
-    print(f"📰 News sites: {', '.join(NEWS_SITES.keys())}")
-    print(f"🎯 Target: {TARGET_TOTAL_ARTICLES} total articles")
-    print(f"📊 Strategy: {MAX_ARTICLES_PER_KEYWORD} articles per keyword per site\n")
+    print("Starting Enhanced News Web Scraper...")
+    print(f"Total keywords to process: {len(NEWS_KEYWORDS)}")
+    print(f"News sites: {', '.join(NEWS_SITES.keys())}")
+    print(f"Target: {TARGET_TOTAL_ARTICLES} total articles")
+    print(f"Strategy: {MAX_ARTICLES_PER_KEYWORD} articles per keyword per site\n")
     
     # Dictionary to store articles per site
     articles_by_site = {site: [] for site in NEWS_SITES.keys()}
@@ -269,7 +269,7 @@ if __name__ == "__main__":
     total_sites = len(NEWS_SITES)
     articles_per_keyword_site = MAX_ARTICLES_PER_KEYWORD
     
-    print(f"📐 Calculation:")
+    print(f"Calculation:")
     print(f"   {total_keywords} keywords × {total_sites} sites × {articles_per_keyword_site} articles")
     print(f"   = ~{total_keywords * total_sites * articles_per_keyword_site} maximum articles\n")
     

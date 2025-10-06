@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-# Load environment variables
 load_dotenv()
 
 # Get API key from .env
@@ -17,13 +16,12 @@ if not YOUTUBE_API_KEY:
     print("ERROR: YOUTUBE_API_KEY not found in .env file")
     exit(1)
 
-# Output file
 OUTPUT_FILE = "social_media/youtube.csv"
 
 # Create directory if not exists
 os.makedirs("social_media", exist_ok=True)
 
-# Build YouTube client
+# Build YouTube client through API
 yt_client = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 
 

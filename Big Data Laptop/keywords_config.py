@@ -3,7 +3,7 @@
 # Tema: #WujudkanIndonesiaDamai
 # ========================================
 
-# --- KEYWORDS FOR NEWS PORTALS (BBC, Detik, Hukumonline) ---
+# --- KEYWORDS FOR NEWS PORTALS (Detik) ---
 # Use these with requests + BeautifulSoup
 NEWS_KEYWORDS = [
     # Kategori 1: Kata Kunci Utama
@@ -41,7 +41,7 @@ NEWS_KEYWORDS = [
 ]
 
 # --- KEYWORDS FOR YOUTUBE ---
-# Use these with Selenium (search queries)
+# Use Youtube V3 API
 YOUTUBE_KEYWORDS = [
     "Webinar Wujudkan Indonesia Damai",
     "Deklarasi kampanye damai",
@@ -53,8 +53,6 @@ YOUTUBE_KEYWORDS = [
     "Kampanye anti hoax Indonesia",
 ]
 
-# --- SCRAPING LIMITS CONFIGURATION ---
-# Adjust these values to control how much data to collect
 SCRAPING_LIMITS = {    
     # YouTube limits
     "youtube_videos_per_keyword": 3,          # How many videos to scrape per keyword
@@ -65,8 +63,6 @@ SCRAPING_LIMITS = {
     "news_articles_per_keyword": 5,           # How many articles to scrape per keyword
 }
 
-# --- KEYWORD LIMITS FOR TESTING ---
-# You can limit how many keywords to process for testing
 LIMIT_NEWS_KEYWORDS = None  # Set to a number (e.g., 5) to limit, or None for all
 LIMIT_INSTAGRAM_HASHTAGS = None
 LIMIT_YOUTUBE_KEYWORDS = None

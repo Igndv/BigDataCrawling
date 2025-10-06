@@ -5,7 +5,6 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import os
 
-# --- 📜 KONFIGURASI ---
 
 # Model IndoBERT yang telah di-fine-tune khusus untuk analisis sentimen 3 kelas (positive, neutral, negative)
 MODEL_NAME = "mdhugol/indonesia-bert-sentiment-classification"
