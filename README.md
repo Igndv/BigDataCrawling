@@ -139,7 +139,7 @@ Keywords Youtube :
        
     6. Convert from csv to excel from website (manually)
         
-        ![Convert from csv to excel](./photo/convert_to_excel.png)
+        ![Convert from csv to excel](./photo/convert_csv_to_excel.png)
         
     7. Dashboard and visualize data with PowerBI
         
