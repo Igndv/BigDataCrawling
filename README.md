@@ -135,12 +135,36 @@ Keywords Youtube :
 
     5. Dilakukan sentiment analysis oleh Indobert Model
         
-        ![Start Process](./photo/final_sentiment_results_1.png)
+        ![Process](./photo/final_sentiment_results_1.png)
        
     6. Convert from csv to excel from website (manually)
         
-        ![Ganti nanti](./photo/final_sentiment_results_1.png)
+        ![Convert from csv to excel](./photo/convert_to_excel.png)
         
-    7. Dashboard and visualize data with Tableu
+    7. Dashboard and visualize data with PowerBI
         
-        ![Ganti Nanti](./photo/final_sentiment_results_1.png)
+        ![Dashboard 1](./photo/data_1.png)
+        ![Dashboard 2](./photo/data_2.png)
+        ![Dashboard 3](./photo/data_3.png)
+
+--------------------------------------------------------------------------------------
+
+Hasil Data Dari Crawling Berita dan Sosmed Youtube :
+
+    Data yang diperoleh based on Source
+
+    Total Data : 1224 data
+    Detik : 688 data (56,21%)
+    Youtube : 536 data (43,79%)
+
+Hasil Sentiment Analysis :
+
+    Sentimen Netral: Sentimen netral merupakan yang paling dominan, dengan 481 kemunculan, menyumbang 39,30% dari total sentimen.
+
+    Sentimen Positif: Sentimen positif berada di posisi kedua, dengan 407 kemunculan, atau 33,25% dari total.
+
+    Sentimen Negatif: Sentimen negatif adalah yang paling sedikit, dengan 336 kemunculan, atau 27,45% dari total. 
+
+Result : Mostly Positive And Neutral 
+
+Secara umum, sentimen yang terdeteksi cenderung positif atau netral. Dengan nilai rata-rata sentiment_score sebesar 0.82 (dari skala 0 hingga 1), ini menunjukkan bahwa sebagian besar konten atau komentar yang dianalisis memiliki nuansa yang mendukung atau setidaknya tidak negatif terhadap topik perdamaian dan persatuan.
